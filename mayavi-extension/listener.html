@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Character Summoner - Listening</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Character Summoner</h1>
+
+  <button id="micBtn" class="mic" title="Start listening" aria-label="Start listening">🎤</button>
+
+  <div id="status" class="status">Ready</div>
+  <div id="counter" class="counter">0 / 3</div>
+
+  <button id="stopBtn" class="stop" disabled>Stop Listening</button>
+
+  <div id="message" class="message" hidden></div>
+
+  <p class="hint">Hands-free mode: say “Om Kream Kutti Chatha” once, on any website.<br />Keep this window open. You can minimize it.</p>
+
+  <script src="listener.js"></script>
+</body>
+</html>

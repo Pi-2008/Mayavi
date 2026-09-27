@@ -1,0 +1,79 @@
+* { box-sizing: border-box; }
+
+body {
+  width: 280px;
+  margin: 0;
+  padding: 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #14121f;
+  color: #f1eefc;
+  text-align: center;
+}
+
+h1 { font-size: 15px; margin: 0 0 12px; letter-spacing: .4px; }
+
+.mic {
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: #6c4cf5;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(108, 76, 245, .5);
+  transition: transform .1s, background .2s;
+}
+.mic:hover:not(:disabled) { transform: scale(1.05); }
+.mic:disabled { cursor: default; opacity: .55; }
+.mic.listening {
+  background: #e5484d;
+  animation: pulse 1.3s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(229, 72, 77, .6); }
+  70%  { box-shadow: 0 0 0 16px rgba(229, 72, 77, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 72, 77, 0); }
+}
+
+.status  { margin-top: 12px; font-size: 14px; min-height: 20px; color: #cfc8f5; }
+.counter { margin: 4px 0 10px; font-size: 30px; font-weight: 700; }
+
+.stop {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #4a4566;
+  border-radius: 8px;
+  background: transparent;
+  color: #f1eefc;
+  font-size: 13px;
+  cursor: pointer;
+}
+.stop:disabled { opacity: .4; cursor: default; }
+.stop:hover:not(:disabled) { background: #26223a; }
+
+.message {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+  background: #3b1d24;
+  color: #ffc9cd;
+}
+.message.info { background: #1f2d3f; color: #c7e0ff; }
+
+.row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 12px; font-size: 12px;
+}
+.row select {
+  background: #26223a; color: #f1eefc;
+  border: 1px solid #4a4566; border-radius: 6px; padding: 3px 6px;
+}
+
+.link {
+  margin-top: 10px; background: none; border: none;
+  color: #9d8cff; font-size: 12px; cursor: pointer; text-decoration: underline;
+}
+.hint { font-size: 11px; color: #8d88a8; margin: 8px 0 0; line-height: 1.4; }
